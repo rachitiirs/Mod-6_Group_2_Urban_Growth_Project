@@ -1,0 +1,12 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>stable_lights</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">63</MDI>
+      <MDI key="STATISTICS_MEAN">4.9505513439008</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">11.775721207841</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">53.23</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

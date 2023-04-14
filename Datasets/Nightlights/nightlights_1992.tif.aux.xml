@@ -1,0 +1,12 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>avg_vis</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">52</MDI>
+      <MDI key="STATISTICS_MEAN">3.6678152997932</MDI>
+      <MDI key="STATISTICS_MINIMUM">2</MDI>
+      <MDI key="STATISTICS_STDDEV">4.1182041088753</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">53.23</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
