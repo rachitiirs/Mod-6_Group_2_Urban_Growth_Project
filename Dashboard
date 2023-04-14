@@ -29,6 +29,7 @@ var ranchi = ee.FeatureCollection("users/gokulrajkamath96/Ranchi_shp"),
     
     //////////////////////////////////////////////////////////////////////////////////////////////////
     //Dashboard code
+    // visualization paramaters
     
 var imageVisParam = {"opacity":1,"bands":["b1"],"min":0,"max":5,"palette":["#c22c00","#1e32ff","#285c26","#f0ff95","#a8951a","#3cd63e"]}
 var imageVisParam_change = {min:0,max:1,palette:['white','red']};
@@ -36,7 +37,9 @@ var imageVisPram_indices_NDVI= {min:-1,max:1,palette:['white','green']};
 var imageVisPram_indices_NDWI= {min:0,max:1,palette:['white','blue']};
 var imageVisPram_indices_NDBI= {min:0,max:1,palette:['white','red']};
 var imageVisParam_GHSL = {min: 1,max: 4,palette : ["#2E7F18","#675E24","#8D472B","#C82538"]};
+
 /* ARRAYS OF AREAS OF EACH CLASS FOR EVERY YEAR */ 
+
 var areas_1992 = [85.464, 51.229, 1274.123, 765.143, 2207.08,602.844];
 var areas_2002 = [126.26, 54.57, 1538.84, 963.34, 1649.44,608.42];
 var areas_2013 = [136.90, 86.75, 1446.75,307.26, 1337.72,1630.51];
@@ -51,12 +54,15 @@ var area_change_1992_2002 = [16.751,4.061,4.192,46.777,38.354,11.173];
 var area_change_2002_2013 = [38.101,3.909,26.502,25.582,37.016,5.792];
 var area_change_2013_2022 = [77.425,8.972,17.607,38.482,72.740,159.211];
 var panel = ui.Panel({style: {width:'30%', 'backgroundColor':'#181823'}});
+//creating map panel
 ui.root.insert(0,panel);
 var main_map = ui.Map({style: {width:'70%'}});
 main_map.setCenter(85.335978 , 23.367780, 10); // Set the center of the map and the zoom level
 main_map.addLayer(ranchi);
 ui.root.insert(1,main_map); // add the main map widget to the root
 var class1=['Low','Medium' ,"High",'Very High']
+//LEGEND
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* PANEL FOR LEGEND OF LULC */
 var legend_panel =ui.Panel({
   style:{
@@ -98,6 +104,7 @@ var list_legend = function(color,description){
 for(var a = 0; a <5; a++){ // Increase the number of iterations depending on the number of classes in the classified image
   legend_panel.add(list_legend(color[a], classified_class[a])); // add each color and the class name to the legend 
 }
+//generating labels for GHSL
 var legend_ghsl = ui.Panel({
   style: {
     position: 'bottom-left',
@@ -170,6 +177,8 @@ dashboard_info.style().set({
 });
 panel.add(dashboard_info)
 // slelect button
+/////LABELS
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 var lulc_label = ui.Label('The maps show the Land use Land cover statistics for 1992, 2002, 2013, and 2022,made using Random Forest Classification method'+
                             ',Click on the button below to select the map of the particular year.');
 lulc_label.style().set({
@@ -240,7 +249,8 @@ NDWI_label.style().set({
   'backgroundColor': '#181823',
   'font-family': 'Helvetica',
 });
-
+//Dictionaries for option Selection
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var lulc = {
   'LULC 1992': lulc_1992,
   'LULC 2002': lulc_2002,
@@ -290,7 +300,8 @@ var options = {
   'NDBI change':'NDBI change',
   'GHSL Population change': 'GHSL Population Change',
 };
-//cartsts
+//carts
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
 var chart_1992 = ui.Chart.array.values(areas_1992, 0, class_names).setChartType('ColumnChart')
                     .setOptions({
                     hAxis: {title: 'Area Km2'},
@@ -375,7 +386,8 @@ var chart_2013_2022 = ui.Chart.array.values(area_change_2013_2022, 0, area_chang
                     fontSize: 10,
                     chartArea: {backgroundColor: 'EBEBEB'}
                   });
-
+///Selection dial
+//----------------------------------------------------------------------------------------------------------------------------------
 var lulc_selection = ui.Select({
   items: Object.keys(lulc),
   onChange: function(key){
@@ -700,7 +712,8 @@ NDVI_selection.style().set({
   padding: '0 20px 0 20px',
   'backgroundColor':'#181823'
 });
-
+//Main widget map selection
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 var options_selection = ui.Select({
   items: Object.keys(options), 
   onChange: function(key){
