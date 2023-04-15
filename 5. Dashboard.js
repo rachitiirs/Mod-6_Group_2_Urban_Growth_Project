@@ -27,7 +27,7 @@ var ranchi = ee.FeatureCollection("users/gokulrajkamath96/Ranchi_shp"),
     GHSL_Population_2020 = ee.Image("users/gokulrajkamath96/reclass_2020"),
     GHSL_Population_1990 = ee.Image("users/gokulrajkamath96/reclass_90");
     
-    //////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////
     //Dashboard code
     // visualization paramaters
     
