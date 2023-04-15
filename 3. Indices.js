@@ -31,7 +31,7 @@ Map.addLayer(ndvi_b_1992, {}, 'ndvi_b_1992', false);
 Map.addLayer(ndbi_c_1992, {}, 'ndbi_c_1992', false);
 Map.addLayer(ndbi_b_1992, {}, 'ndbi_b_1992', false);
 
-Map.addLayer(bu_1992.clip(table), {}, 'nu_1992');
+Map.addLayer(bu_1992.clip(table), {}, 'bu_1992');
 print(bu_1992.reduceRegion(ee.Reducer.count(),table, 30));
 
 
@@ -62,7 +62,7 @@ print(bu_1992.reduceRegion(ee.Reducer.count(),table, 30));
 // Map.addLayer(ndbi_c_2001, {}, 'ndbi_c_2001', false);
 // Map.addLayer(ndbi_b_2001, {}, 'ndbi_b_2001', false);
 
-// Map.addLayer(bu_2001, {}, 'nu_2001');
+// Map.addLayer(bu_2001, {}, 'bu_2001');
 // print(bu_2001.reduceRegion(ee.Reducer.count(),table, 30));
 //---------------------------------------------------------------------------
 
@@ -95,7 +95,7 @@ print(bu_1992.reduceRegion(ee.Reducer.count(),table, 30));
 // Map.addLayer(ndbi_c_2013, {}, 'ndbi_c_2013', false);
 // Map.addLayer(ndbi_b_2013, {}, 'ndbi_b_2013', false);
 
-// Map.addLayer(bu_2013, {}, 'nu_2013');
+// Map.addLayer(bu_2013, {}, 'bu_2013');
 // print(bu_2013.reduceRegion(ee.Reducer.count(),table, 30));
 
 ///------------------------For the year 2021------------------------
@@ -119,12 +119,12 @@ print(bu_1992.reduceRegion(ee.Reducer.count(),table, 30));
 // var ndbi_b_2021 = ee.Image.constant(254)
 //                   .updateMask(ndvi_c_2021.gt(0));
                   
-// var bu_2021 = ndbi_b_2021.subtract(ndvi_c_2021).rename("bu_2001");
+// var bu_2021 = ndbi_b_2021.subtract(ndvi_c_2021).rename("bu_2021");
 
 // Map.addLayer(ndvi_c_2021, {}, 'ndvi_c_2001', false);
 // Map.addLayer(ndvi_b_2021, {}, 'ndvi_b_2001', false);
 // Map.addLayer(ndbi_c_2021, {}, 'ndbi_c_2001', false);
 // Map.addLayer(ndbi_b_2021, {}, 'ndbi_b_2001', false);
 
-// Map.addLayer(bu_2021, {}, 'nu_2021');
+// Map.addLayer(bu_2021, {}, 'bu_2021');
 // print(bu_2021.reduceRegion(ee.Reducer.count(),table, 30));
