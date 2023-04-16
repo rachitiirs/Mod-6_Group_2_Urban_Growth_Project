@@ -7,7 +7,7 @@ In this repository Google Earth Engine codes has been added for the project from
 1992 classification: https://code.earthengine.google.com/1988223455e88af763e51daae426d364
 2001 classification: https://code.earthengine.google.com/6481ba40821d62b6d1d6abe2420a024a
 2013 classification: https://code.earthengine.google.com/9acf78b75d1b795af1c0ac5d9748767a
-2022 classification: https://code.earthengine.google.com/9554386004cf8eb37b4c1d44587436e4
+2021 classification: https://code.earthengine.google.com/9554386004cf8eb37b4c1d44587436e4
 Change Detection: https://code.earthengine.google.com/da29a76c1d19e201a45f0ad7d83381de
 Indices code: https://code.earthengine.google.com/bfad591fb2040e8c3d92be8b8247aacf
 Nightlights: https://code.earthengine.google.com/63eb43d430fab2949b32450063fe48bb
