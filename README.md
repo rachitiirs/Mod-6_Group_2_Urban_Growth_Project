@@ -12,6 +12,8 @@ Change Detection: https://code.earthengine.google.com/da29a76c1d19e201a45f0ad7d8
 Indices code: https://code.earthengine.google.com/bfad591fb2040e8c3d92be8b8247aacf
 Nightlights: https://code.earthengine.google.com/63eb43d430fab2949b32450063fe48bb
 
+GHSL: https://ghsl.jrc.ec.europa.eu/download.php?ds=pop
+
 This repository contains 5 google earth engine code files and 1 folder for datasets containing all the datasets used in the project work.
 
 Datasets: This folder contains all the dataset used and outputs generated/exported from the codes
