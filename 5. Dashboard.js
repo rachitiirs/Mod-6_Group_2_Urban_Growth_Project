@@ -60,7 +60,7 @@ var main_map = ui.Map({style: {width:'70%'}});
 main_map.setCenter(85.335978 , 23.367780, 10); // Set the center of the map and the zoom level
 main_map.addLayer(ranchi);
 ui.root.insert(1,main_map); // add the main map widget to the root
-var class1=['Low','Medium' ,"High",'Very High']
+var class1=['Low','Medium' ,"High",'Very High']     // Classes for GHSL
 //LEGEND
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* PANEL FOR LEGEND OF LULC */
@@ -104,7 +104,7 @@ var list_legend = function(color,description){
 for(var a = 0; a <5; a++){ // Increase the number of iterations depending on the number of classes in the classified image
   legend_panel.add(list_legend(color[a], classified_class[a])); // add each color and the class name to the legend 
 }
-//generating labels for GHSL
+//generating legend for GHSL
 var legend_ghsl = ui.Panel({
   style: {
     position: 'bottom-left',
@@ -165,7 +165,7 @@ title.style().set({
   'font-weight': 'bold'
 });
 panel.add(title);
-var dashboard_info = ui.Label('This Dashboard shows the decadal urban growth from 1992 to 2022 of Ranchi capital city of Jharkhand.'+
+var dashboard_info = ui.Label('This Dashboard shows the decadal urban growth from 1992 to 2022 of Ranchi district of Jharkhand.'+
                               ' The user can select any Seven visualization options LULC, Builtup Change, Nightlights,GHSL,NDVI,NDBI,NDWI.')
 dashboard_info.style().set({
   'color': '#000000', 
@@ -176,7 +176,7 @@ dashboard_info.style().set({
   'font-family': 'Helvetica',
 });
 panel.add(dashboard_info)
-// slelect button
+// select button
 /////LABELS
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 var lulc_label = ui.Label('The maps show the Land use Land cover statistics for 1992, 2002, 2013, and 2022,made using Random Forest Classification method'+
@@ -300,7 +300,7 @@ var options = {
   'NDBI change':'NDBI change',
   'GHSL Population change': 'GHSL Population Change',
 };
-//carts
+//charts
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 var chart_1992 = ui.Chart.array.values(areas_1992, 0, class_names).setChartType('ColumnChart')
                     .setOptions({
@@ -393,7 +393,7 @@ var lulc_selection = ui.Select({
   onChange: function(key){
     if(key === 'LULC 1992'){
       main_map.clear();
-      panel.remove(chart_2002);
+      panel.remove(chart_2002);  // To remove chart if existing
       panel.remove(chart_2013);
       panel.remove(chart_2022);
       main_map.addLayer(lulc['LULC 1992'].clip(ranchi), imageVisParam, 'LULC 1992');
