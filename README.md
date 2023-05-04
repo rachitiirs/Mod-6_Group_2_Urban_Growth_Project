@@ -36,3 +36,6 @@ The code in this javascript file has been written to generate a dashboard in goo
 
 Tutorial for making ui web app
 https://developers.google.com/earth-engine/tutorials/community/creating-web-apps
+
+For validation of Land use change maps, reference datasets LinkedIn post:
+https://www.linkedin.com/feed/update/urn:li:activity:7051402895421820929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7051402895421820929%2C7051426518002008064%29
