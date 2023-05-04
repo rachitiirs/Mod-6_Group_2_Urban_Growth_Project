@@ -34,8 +34,10 @@ Nightlight maps were obtained from GEE from the Defense Meteorological Program (
 5. Dashboard.js
 The code in this javascript file has been written to generate a dashboard in google earth engine app.
 
-Tutorial for making ui web app
+Tutorial for making ui web app and split maps
 https://developers.google.com/earth-engine/tutorials/community/creating-web-apps
+
+https://colab.research.google.com/drive/1L1CoT5LXSeW-CGJjomd_8fju_rIXoR3T?usp=sharing
 
 For validation of Land use change maps, reference datasets LinkedIn post:
 https://www.linkedin.com/feed/update/urn:li:activity:7051402895421820929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7051402895421820929%2C7051426518002008064%29
